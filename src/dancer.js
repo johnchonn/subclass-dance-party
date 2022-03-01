@@ -30,3 +30,27 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 
   return dancer;
 };
+
+// create new class Dancer as function
+var Dancer = function(top, left, timeBetweenSteps) {
+  this.$node = $('<span class="dancer"></span>');
+  this.timeBetweenSteps = timeBetweenSteps;
+  this.setPosition(top, left);
+  // this.step = function() {
+  //   setTimeout(this.step, timeBetweenSteps);
+  // };
+  this.step();
+};
+
+Dancer.prototype.step = function() {
+  setTimeout(this.step.bind(this), this.timeBetweenSteps);
+};
+
+Dancer.prototype.setPosition = function(top, left) {
+  var styleSettings = {
+    top: top,
+    left: left
+  };
+
+  this.$node.css(styleSettings);
+};
