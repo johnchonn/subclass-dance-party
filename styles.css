@@ -25,3 +25,17 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+.grow-dancer{
+  border-radius: 20px;
+  border: 20px solid green;
+  position:absolute;
+}
+
+.spin-dancer{
+  border-radius: 30;
+  border: 10px solid pink;
+  position:absolute;
+  width: 50px;
+  height: 50px;
+}
