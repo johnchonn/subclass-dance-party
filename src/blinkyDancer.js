@@ -28,8 +28,8 @@ BlinkyDancer.prototype = Object.create(Dancer.prototype);
 BlinkyDancer.prototype.constructor = BlinkyDancer;
 
 BlinkyDancer.prototype.step = function() {
-  // currently this.
 
+  // currently this.
   this.$node.toggle();
   Dancer.prototype.step.call(this);
 };

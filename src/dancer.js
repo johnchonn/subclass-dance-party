@@ -52,3 +52,9 @@ Dancer.prototype.setPosition = function(top, left) {
 
   this.$node.css(styleSettings);
 };
+
+Dancer.prototype.lineUp = function() {
+  var top = $('body').height() / 2;
+  var left = $('body').width() / 2;
+  this.setPosition(top, left);
+};

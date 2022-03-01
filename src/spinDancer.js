@@ -9,7 +9,6 @@ SpinDancer.prototype.constructor = SpinDancer;
 
 
 SpinDancer.prototype.step = function() {
-
   this.$node.animate(
     { deg: 400 },
     { duration: 2400,

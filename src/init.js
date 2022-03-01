@@ -22,12 +22,25 @@ $(document).ready(function() {
 
     // make a dancer with a random position
 
+    // dancer -> new BlinkyDancer(top, left, interval) -> (random, random, random)
     var dancer = new dancerMakerFunction(
       $('body').height() * Math.random(),
       $('body').width() * Math.random(),
       Math.random() * 1000
     );
+
+    // Store the dancer in an array
+    window.dancers.push(dancer);
+
+    // Add dancer to the stage
     $('body').append(dancer.$node);
   });
+
+  $('.alignDancerButton').on('click', function(event) {
+    for (var i = 0; i < window.dancers.length; i++) {
+      window.dancers[i].lineUp(); // -> sets position to 200, 300
+    }
+  });
+
 });
 
